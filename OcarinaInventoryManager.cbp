@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OcarinaInventoryManager" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/OcarinaIM_d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="Legend of zelda tools/bin/Debug/libLegend of zelda tools.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/OcarinaIM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="Legend of zelda tools/bin/Release/libLegend of zelda tools.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="Legend of zelda tools" />
+			<Add directory="SDL2-2.0.9/i686-w64-mingw32/include" />
+			<Add directory="SDL2_image-2.0.4/i686-w64-mingw32/include" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="SDL2_image" />
+			<Add directory="SDL2-2.0.9/i686-w64-mingw32/lib" />
+			<Add directory="SDL2_image-2.0.4/i686-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="Main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

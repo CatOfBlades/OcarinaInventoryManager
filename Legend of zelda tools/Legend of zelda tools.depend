@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1562046655 source:c:\users\momma\micah\code\legend of zelda tools\main.cpp
+	"LOZ_Tools.h"
+	<windows.h>
+	<stdio.h>
+
+1562047503 c:\users\momma\micah\code\legend of zelda tools\loz_tools.h
+
+1562046655 source:c:\users\momma\micah\code\ocrinainventorymanager\legend of zelda tools\main.cpp
+	"LOZ_Tools.h"
+	<windows.h>
+	<stdio.h>
+
+1562047503 c:\users\momma\micah\code\ocrinainventorymanager\legend of zelda tools\loz_tools.h
+
