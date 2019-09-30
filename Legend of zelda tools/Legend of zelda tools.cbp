@@ -4,38 +4,81 @@
 	<Project>
 		<Option title="Legend of zelda tools" />
 		<Option pch_mode="2" />
-		<Option compiler="gcc" />
+		<Option compiler="mingw64_gcc_compiler" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Legend of zelda tools" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="mingw64_gcc_compiler" />
 				<Option createDefFile="1" />
 				<Compiler>
 					<Add option="-Wall" />
+					<Add option="-m32" />
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Legend of zelda tools" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="mingw64_gcc_compiler" />
 				<Option createDefFile="1" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-Wall" />
+					<Add option="-m32" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="Release64">
+				<Option output="bin/Release64/Legend of zelda tools" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release64/" />
+				<Option type="2" />
+				<Option compiler="mingw64_gcc_compiler" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-DMINGW64" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+				</Linker>
+			</Target>
+			<Target title="Debug64">
+				<Option output="bin/Debug64/Legend of zelda tools" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug64/" />
+				<Option type="2" />
+				<Option compiler="mingw64_gcc_compiler" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-DMINGW64" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
 				</Linker>
 			</Target>
 		</Build>
 		<Unit filename="LOZ_Tools.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="MM.cpp" />
+		<Unit filename="OOT.cpp" />
+		<Unit filename="conversion.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

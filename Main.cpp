@@ -353,6 +353,10 @@ public:
         }
         _renderer = renderer;
     }
+    ~itemMenu()
+    {
+        OOT::Process_Dettach();
+    }
     OOT::inventory inventory;
     void updateGame()
     {
