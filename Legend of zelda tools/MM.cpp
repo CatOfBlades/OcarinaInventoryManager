@@ -10,7 +10,11 @@ DWORD MMMemBase;
 DWORD MMprocessid;
 HANDLE MMhprocess;
 int MMis_game_open = 0;
+#ifdef MINGW64
+long long unsigned int MMbytesread=0;
+#else
 DWORD MMbytesread=0;
+#endif
 
 /*
 int32_t __builtin_bswap32 (int32_t x) //nintendo 64 is big-endian while the system is little-endian, some things will need byte swapping.
@@ -39,6 +43,12 @@ int LOZMM::Process_Attach()
     MMhprocess = OpenProcess(PROCESS_ALL_ACCESS,0,MMprocessid);
     ReadProcessMemory(MMhprocess,(void*)MMIMEM,&MMMemBase,4,0);
     return MMis_game_open;
+}
+
+int LOZMM::Process_Dettach()
+{
+    CloseHandle(MMhprocess);
+    return 0;
 }
 
 float LOZMM::GetX()

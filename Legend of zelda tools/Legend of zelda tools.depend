@@ -18,7 +18,8 @@
 	<windows.h>
 	<stdio.h>
 
-1564805590 c:\users\momma\micah\code\ocarinainventorymanager\legend of zelda tools\loz_tools.h
+1569868877 c:\users\momma\micah\code\ocarinainventorymanager\legend of zelda tools\loz_tools.h
+	"jni.h"
 
 1564805241 source:c:\users\momma\micah\code\ocarinainventorymanager\legend of zelda tools\mm.cpp
 	"LOZ_Tools.h"
@@ -27,4 +28,11 @@
 
 1564804057 source:c:\users\momma\micah\code\ocarinainventorymanager\legend of zelda tools\conversion.cpp
 	"LOZ_Tools.h"
+
+1561994268 c:\users\momma\micah\code\ocarinainventorymanager\legend of zelda tools\jni.h
+	<stdio.h>
+	<stdarg.h>
+	"jni_md.h"
+
+1561994268 c:\users\momma\micah\code\ocarinainventorymanager\legend of zelda tools\jni_md.h
 

@@ -10,7 +10,11 @@ DWORD OOTMemBase;
 DWORD OOTprocessid;
 HANDLE OOThprocess;
 int OOTis_game_open = 0;
+#ifdef MINGW64
+long long unsigned int OOTbytesread=0;
+#else
 DWORD OOTbytesread=0;
+#endif
 
 /*
 int32_t __builtin_bswap32 (int32_t x) //nintendo 64 is big-endian while the system is little-endian, some things will need byte swapping.
@@ -39,6 +43,11 @@ int OOT::Process_Attach()
     OOThprocess = OpenProcess(PROCESS_ALL_ACCESS,0,OOTprocessid);
     ReadProcessMemory(OOThprocess,(void*)OOTIMEM,&OOTMemBase,4,0);
     return OOTis_game_open;
+}
+int OOT::Process_Dettach()
+{
+    CloseHandle(OOThprocess);
+    return 0;
 }
 
 float OOT::GetX()

@@ -659,6 +659,11 @@ public:
         }
         _renderer = renderer;
     }
+    ~itemMenu()
+    {
+        LOZMM::Process_Dettach();
+        OOT::Process_Dettach();
+    }
     LOZMM::inventory MMinventory;
     OOT::inventory OOTinventory;
     void updateGame()

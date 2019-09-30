@@ -2,6 +2,8 @@
 #ifndef LOZ_TOOLS_H_INCLUDED
 #define LOZ_TOOLS_H_INCLUDED
 
+#include "jni.h"
+
 
 namespace OOT
 {
@@ -317,6 +319,7 @@ namespace OOT
     float GetZ();
     void test();
     int Process_Attach();
+    int Process_Dettach();
     void SetTargetWindowByName(char* windowname);
     void readInventory(inventory* inv);
     void writeInventory(inventory* inv);
@@ -775,9 +778,30 @@ namespace LOZMM
     float GetZ();
     void test();
     int Process_Attach();
+    int Process_Dettach();
     void SetTargetWindowByName(char* windowname);
     void readInventory(inventory* inv);
     void writeInventory(inventory* inv);
+
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+    /*
+     * Class:     HelloJNI
+     * Method:    sayHello
+     * Signature: ()V
+     */
+    JNIEXPORT float JNICALL GetX(JNIEnv *, jobject);
+    JNIEXPORT float JNICALL GetY(JNIEnv *, jobject);
+    JNIEXPORT float JNICALL GetZ(JNIEnv *, jobject);
+    JNIEXPORT int JNICALL Process_Attach(JNIEnv *, jobject);
+    JNIEXPORT void JNICALL SetTargetWindowByName(JNIEnv *, jobject);
+    JNIEXPORT void JNICALL readInventory(JNIEnv *, jobject);
+    JNIEXPORT void JNICALL writeInventory(JNIEnv *, jobject);
+
+    #ifdef __cplusplus
+    }
+    #endif
 
 }
 
